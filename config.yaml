@@ -1,0 +1,12 @@
+TITLE: Rafael Martins
+TITLE_HTML: Rafael Martins
+TAGLINE: Day after day, alone on the hill...
+POSTS_PER_PAGE: 2
+POSTS_PER_ATOM_FEED: 10
+AUTHOR: Rafael G. Martins
+TIMEZONE: America/Sao_Paulo
+LOCALE: pt_BR
+SHOW_RST_SOURCE: False
+EXTENSIONS:
+    - tumblelog
+OEMBED_MAXWIDTH: 630

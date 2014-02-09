@@ -1,0 +1,134 @@
+{%- extends 'base.html' %}
+
+{%- macro format_tags(tags, with_links=True) %}
+    {%- for t in tags %}
+        {%- if loop.last and tags|length > 1 %} e {% else %}{%
+            if not loop.first -%}, {% endif %}{% endif -%}
+        {% if with_links -%}
+        <a href="{{ url_for('views.tag', tag=t) }}">{{ t }}</a>
+        {%- else %}{{ t }}{% endif %}
+    {%- endfor %}
+{%- endmacro %}
+
+{%- macro format_title(post) %}
+    {%- if 'videos' in post.tags -%}
+        Video:
+    {%- elif 'imagens' in post.tags -%}
+        Imagem:
+    {%- elif 'fotos' in post.tags -%}
+        Foto:
+    {%- endif %} {{ post.title }}
+{%- endmacro %}
+
+{%- macro my_title() %}
+    {%- if active_page != '' %}{%
+        if tag %}
+            {% if tag|length > 1 -%}
+                Tags: {{ format_tags(tag, False) }}
+            {%- else -%}
+                Tag: {{ tag|first }}
+            {%- endif %}
+        {%- elif active_page == 'posts' -%}
+            Posts
+        {%- elif active_page == 'post' -%}
+            {{ format_title(posts|first) }}
+        {%- elif pagination -%}
+            Página {{ pagination.current }}
+        {%- else %}
+            {{ title }}
+        {%- endif %}
+    {%- endif %}
+{%- endmacro %}
+
+{%- set title = my_title() %}
+
+{%- block title %}{% if title %}{{ title }} | {% endif %}{%- endblock %}
+
+{%- block body %}
+
+{%- if tag -%}
+<blockquote>
+    <p>
+        Você está vendo os arquivos da{% if tag|length > 1%}s{% endif %} tag{%
+            if tag|length > 1%}s{% endif %} {{ format_tags(tag) }}. (<small><a href="{{
+            url_for('views.atom', tag=tag|join('/')) }}">Feed Atom</a></small>)
+    </p>
+</blockquote>
+{%- endif %}
+
+{%- for post in posts %}
+{%- if post.title %}
+<h2>
+    {%- if is_post(post.slug) -%}
+    <a href="{{ url_for('views.content', slug=post.slug) }}">{{ format_title(post) }}</a>
+    {%- else -%}
+    {{ post.title }}
+    {%- endif -%}
+</h2>
+{%- endif %}
+
+{%- if full_content -%}
+    {{ post.full_html|safe }}
+{%- else -%}
+    {{ post.abstract_html|safe }}
+{%- endif %}
+
+{%- if post.read_more and not full_content -%}
+<p>
+    <a href="{{ url_for('views.content', slug=post.slug) }}">Leia mais...</a>
+</p>
+{%- endif -%}
+
+{%- if is_post(post.slug) -%}
+<p class="signature">
+    {%- if 'videos' in post.tags -%}
+        Video publicado por
+    {%- elif 'images' in post.tags -%}
+        Imagem publicada por
+    {%- elif 'photos' in post.tags -%}
+        Foto publicada por
+    {%- else -%}
+        Post escrito por
+    {%- endif %}
+    {{ post.author_name }} em {{ post.datetime|datetimeformat }}{% if
+        post.tags %}, arquivado sob a{% 
+        if post.tags|length > 1 %}s{% endif %} tag{%
+        if post.tags|length > 1 %}s{% endif %} {{ format_tags(post.tags)
+        }}{% endif %}.
+    <a href="#" class="comments">Comentários</a>.
+    <a href="{{ url_for('views.content', slug=post.slug) }}">Link permanente</a>.
+</p>
+{%- endif -%}
+
+{%- else %}
+<blockquote>
+    <p>
+        Não há nada disponível aqui ainda, mas você já pode assinar o meu
+        <a href="{{ url_for('views.atom') }}">feed Atom</a> para ter acesso aos
+        posts assim que eu começar a publicar! :)
+    </p>
+</blockquote>
+{%- endfor %}
+
+{%- if posts %}
+
+{%- if pagination %}
+<div id="pager">
+    <ul>
+        {%- if pagination.current > 1 %}
+        <li class="previous"><a href="{{ pagination.url_gen(pagination.current-1) }}">&larr; Mais novos</a></li>
+        {%- else %}
+        <li class="previous">&larr; Mais novos</li>
+        {%- endif %}
+        {%- if pagination.current < pagination.num_pages %}
+        <li class="next"><a href="{{ pagination.url_gen(pagination.current+1) }}">Mais antigos &rarr;</a></li>
+        {%- else %}
+        <li class="next">Mais antigos &rarr;</li>
+        {%- endif %}
+    </ul>
+</div>
+{%- endif %}
+
+{%- endif %}
+
+{%- endblock %}

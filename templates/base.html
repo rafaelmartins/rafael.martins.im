@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="generator" content="blohg {{ version }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" media="screen" rel="stylesheet" href="{{
+            url_for('static', filename='css/screen.css') }}" />
+        <link type="text/css" media="screen" rel="stylesheet" href="{{
+            url_for('static', filename='css/pygments.css') }}" />
+        <link rel="alternate" type="application/atom+xml" href="{{
+            url_for('views.atom') }}" title="{{ config.TITLE }}" />
+        <title>{% block title %}{% endblock %}{{ config.TITLE }}</title>
+
+<!-- begin opengraph header -->
+{% block opengraph_header %}{% endblock %}
+
+<!-- end opengraph header -->
+
+<!-- begin google analytics -->
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35792103-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<!-- end google analytics -->
+
+    </head>
+    <body>
+        <div id="header">
+            <h1>{{ config.TITLE_HTML }}</h1>
+            <h2>{{ config.TAGLINE }}</h2>
+            <ul>
+                {%- for href, id, title in [
+                    (url_for('views.home'), ['', 'page', 'post', 'tag'], 'Posts'),
+                    (url_for('views.content', slug='sobre'), ['sobre'], 'Sobre'),
+                ] %}
+                <li><a{% if active_page in id %} class="active"{%
+                    endif %} href="{{ href }}">{{ title }}</a></li>
+                {%- endfor %}
+            </ul>
+        </div>
+        <div id="body">
+
+<!-- begin content -->
+{% block body %}{% endblock %}
+
+<!-- end content -->
+
+        </div>
+        <div class="clear"></div>
+        <div id="footer">
+            <p>Powered by: <a href="http://blohg.org/">blohg {{ version }}</a></p>  
+        </div>
+        <script type="text/javascript" src="{{
+            url_for('static', filename='js/jquery-1.11.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{
+            url_for('static', filename='js/shit.js') }}"></script>
+    </body>
+</html>

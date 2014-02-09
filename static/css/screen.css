@@ -1,0 +1,277 @@
+/**
+ *  screen.css
+ *  ~~~~~~~~~~
+ *
+ *  :copyright: (c) 2010-2012 by Rafael Goncalves Martins
+ *  :license: GPL-2
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #525252;
+    background-color: #131313;
+    text-align: justify;
+}
+
+a {
+    color: #BBB;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul, li {
+    list-style: none;
+}
+
+#header {
+    text-align: center;
+    color: #DBDBDB;
+    background-color: #232323;
+    padding-bottom: 10px;
+}
+
+#header h1 {
+    font-size: 50px;
+    margin-top: 25px;
+}
+
+#header h2 {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#header ul, #header li {
+    display: inline;
+}
+
+#header li {
+    font-size: 20px;
+    margin: 0 15px;
+    padding: 0;
+}
+
+#header a.active {
+    background-color: #191919;
+}
+
+#header a {
+    color: #fff;
+    padding: 5px;
+}
+
+#header a:hover{
+    background-color: #131313;
+    text-decoration: none;
+}
+
+#body {
+    width: 580px;
+    margin: 25px auto;
+}
+
+#body h2, #body h3, #body h4 {
+    color: #BBB;
+}
+
+#body h2 {
+    margin-top: 20px;
+    margin-bottom: 14px;
+}
+
+#body h3 {
+    margin-top: 12px;
+    margin-bottom: 14px;
+}
+
+#body h4 {
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+#body p, #body .line-block {
+    padding-bottom: 10px;
+}
+
+#body img.align-left {
+    float: left;
+    margin-top: 10px;
+    margin-right: 16px;
+    margin-bottom: 10px;
+}
+
+#body ul, #body li{
+    list-style: disc;
+}
+
+#body ul {
+    padding-left: 20px;
+}
+
+#body div.pagination {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#body p.signature {
+    font-size: 11px;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #525252;
+}
+
+#body p.note {
+    font-style: italic;
+    font-size: 12px;
+    color: #646464;
+    padding: 5px;
+    background-color: #181818;
+}
+
+#footer {
+    font-size: 18px;
+    color: #DBDBDB;
+    background-color: #181818;
+    text-align: center;
+    margin: 15px auto;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#footer a {
+    font-weight: normal;
+}
+
+blockquote {
+    font-style: italic;
+    color: #646464;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 14px;
+    margin-top: 4px;
+    background-color: #181818;
+}
+
+tt.literal {
+    background-color: #191919;
+}
+
+img.align-left, .figure.align-left, object.align-left, iframe.align-left {
+    clear: left ;
+    float: left ;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+img.align-right, .figure.align-right, object.align-right, iframe.align-right {
+    clear: right ;
+    float: right ;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+img.align-center, .figure.align-center, object.align-center, iframe.align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+.field-list {
+    background-color: #101010;
+    text-align: left;
+    font-size:14px;
+    margin: 12px auto;
+    margin-top: 0px;
+    padding: 2px;
+}
+
+.field-list th, .field-list td {
+    padding: 1px 4px;
+}
+
+.oembed {
+    text-align: center;
+}
+
+.oembed>* {
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.author {
+    float: right;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.highlight {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#pager {
+    margin: 14px 0;
+    clear: both;
+}
+
+#pager ul, #pager li {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+#pager li {
+    background-color: #191919;
+    display: inline-block;
+    padding: 5px;
+}
+
+#pager li.previous {
+    float: left;
+}
+
+#pager li.next {
+    float: right;
+}
+
+@media only screen and (max-width: 630px) {
+    #body {
+        width: 92%;
+    }
+
+    #header h1 {
+        font-size: 36px;
+        margin-top: 15px;
+    }
+
+    #body h2 {
+        font-size: 18px;
+    }
+
+    #body h3 {
+        font-size: 16px;
+    }
+
+    #body h4 {
+        font-size: 14px;
+    }
+
+    #footer {
+        font-size: 14px;
+    }
+}
+
