@@ -21,7 +21,6 @@ $(function() {
         });
     }).resize();
 
-
     // Fake comment box :P
     $(".comments").click(function (e) {
         alert(
@@ -30,6 +29,5 @@ $(function() {
             "rafael@rafaelmartins.eng.br");
         return false;
     });
-
 });
 
