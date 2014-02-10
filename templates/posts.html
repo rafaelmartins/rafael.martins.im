@@ -22,7 +22,7 @@
 
 {%- macro my_title() %}
     {%- if active_page != '' %}{%
-        if tag %}
+        if tag -%}
             {% if tag|length > 1 -%}
                 Tags: {{ format_tags(tag, False) }}
             {%- else -%}
@@ -34,7 +34,7 @@
             {{ format_title(posts|first) }}
         {%- elif pagination -%}
             Página {{ pagination.current }}
-        {%- else %}
+        {%- else -%}
             {{ title }}
         {%- endif %}
     {%- endif %}
