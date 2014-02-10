@@ -19,7 +19,7 @@ domínio por ser um dos únicos disponíveis com o meu sobrenome.
 Políticas de privacidade e comentários
 --------------------------------------
 
-Este blog não possuí espaço para comentários propositalmente, mas existem
+Este blog não possui espaço para comentários propositalmente, mas existem
 `algumas outras formas <http://rafaelmartins.eng.br/about/#contact>`_ de entrar
 em contato comigo.
 
