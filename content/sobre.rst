@@ -13,7 +13,7 @@ Sobre o domínio do blog
 Não, eu não moro na `Ilha de Man <http://pt.wikipedia.org/wiki/Ilha_de_Man>`_
 (embora goste do `Tourist Trophy <http://www.iomtt.com/>`_), nem trabalho em
 nenhum projeto relacionado a softwares de mensagem instantânea. Escolhi esse
-dominio por ser um dos unicos disponíveis com o meu sobrenome.
+domínio por ser um dos únicos disponíveis com o meu sobrenome.
 
 
 Políticas de privacidade e comentários
@@ -24,7 +24,7 @@ Este blog não possuí espaço para comentários propositalmente, mas existem
 em contato comigo.
 
 Este blog também não armazena nenhuma informação sobre os visitantes, não salva
-nenhum "cookie" no browser do visitante, não gera nenhum tipo de estatísticas
+nenhum *cookie* no browser do visitante, não gera nenhum tipo de estatística
 sobre o público e utiliza o minimo de JavaScript possível (não obstrusivo).
 
 Estas políticas não se aplicam a conteúdo embarcado de *websites* de terceiros,
@@ -34,7 +34,7 @@ como o YouTube, por exemplo.
 Licença de conteúdo
 -------------------
 
-Todo o conteúdo original, criado por mim, está licenciado sob a
+Todo o conteúdo original, criado por mim, está publicado sob a
 `Licença Creative Commons Atribuição-Não Comercial 3.0 Não Adaptada
 <http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR>`_.
 
@@ -51,8 +51,8 @@ Isenção de responsabilidade de conteúdo
 ---------------------------------------
 
 Este blog é de carater pessoal. As opiniões expressadas aqui são de minha
-autoria e não representam as opiniões do meu empregador ou de qualquer entidade
-da qual eu faço parte.
+responsabilidade e não representam a visão do meu empregador ou de qualquer
+entidade da qual eu faço parte.
 
 
 ~rafaelmartins
