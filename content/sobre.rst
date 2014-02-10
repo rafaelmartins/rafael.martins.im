@@ -25,7 +25,7 @@ em contato comigo.
 
 Este blog também não armazena nenhuma informação sobre os visitantes, não salva
 nenhum *cookie* no browser do visitante, não gera nenhum tipo de estatística
-sobre o público e utiliza o minimo possível de JavaScript (não obstrusivo).
+sobre o público e utiliza o mínimo possível de JavaScript (não obstrusivo).
 
 Estas políticas não se aplicam a conteúdo embarcado de *websites* de terceiros,
 como o YouTube, por exemplo.
