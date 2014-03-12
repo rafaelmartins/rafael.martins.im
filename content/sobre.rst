@@ -27,6 +27,9 @@ Este blog também não armazena nenhuma informação sobre os visitantes, não s
 nenhum *cookie* no browser do visitante, não gera nenhum tipo de estatística
 sobre o público e utiliza o mínimo possível de JavaScript (não obstrusivo).
 
+Os arquivos de configuração de servidor utilizados para rodar este blog podem
+ser encontrados aqui: https://gist.github.com/rafaelmartins/9501329
+
 Estas políticas não se aplicam a conteúdo embarcado de *websites* de terceiros,
 como o YouTube, por exemplo.
 
@@ -52,7 +55,7 @@ Isenção de responsabilidade de conteúdo
 
 Este blog é de carater pessoal. As opiniões expressadas aqui são de minha
 responsabilidade e não representam a visão do meu empregador ou de qualquer
-entidade da qual eu faço parte.
+entidade da qual eu faça parte.
 
 
 ~rafaelmartins
