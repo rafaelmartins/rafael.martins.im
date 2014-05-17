@@ -24,11 +24,11 @@ Este blog não possui espaço para comentários propositalmente, mas existem
 em contato comigo.
 
 Este blog também não armazena nenhuma informação sobre os visitantes, não salva
-nenhum *cookie* no browser do visitante, não gera nenhum tipo de estatística
-sobre o público e utiliza o mínimo possível de JavaScript (não obstrusivo).
+nenhum *cookie* no browser, não gera nenhum tipo de estatística sobre o público
+e utiliza o mínimo possível de JavaScript (não obstrusivo).
 
-Os arquivos de configuração de servidor utilizados para rodar este blog podem
-ser encontrados aqui: https://gist.github.com/rafaelmartins/9501329
+Os arquivos de configuração de servidor utilizados para servir este blog podem
+ser encontrados aqui: https://gist.github.com/rafaelmartins/299ba41142a63a050a5d
 
 Estas políticas não se aplicam a conteúdo embarcado de *websites* de terceiros,
 como o YouTube, por exemplo.
@@ -38,8 +38,8 @@ Licença de conteúdo
 -------------------
 
 Todo o conteúdo original, criado por mim, está publicado sob a
-`Licença Creative Commons Atribuição-Não Comercial 3.0 Não Adaptada
-<http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR>`_.
+`Licença Creative Commons Atribuição-Não Comercial 4.0 Internacional
+<http://creativecommons.org/licenses/by-nc/4.0/deed.pt_BR>`_.
 
 
 Renúncia de direitos autorais
