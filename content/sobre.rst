@@ -28,7 +28,9 @@ nenhum *cookie* no browser, não gera nenhum tipo de estatística sobre o públi
 e utiliza o mínimo possível de JavaScript (não obstrusivo).
 
 Os arquivos de configuração de servidor utilizados para servir este blog podem
-ser encontrados aqui: https://gist.github.com/rafaelmartins/299ba41142a63a050a5d
+ser encontrados aqui:
+
+https://gist.github.com/rafaelmartins/299ba41142a63a050a5d
 
 Estas políticas não se aplicam a conteúdo embarcado de *websites* de terceiros,
 como o YouTube, por exemplo.
