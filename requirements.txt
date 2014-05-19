@@ -1,0 +1,2 @@
+-e git+https://github.com/rafaelmartins/blohg.git#egg=blohg[git]
+-e git+https://github.com/rafaelmartins/blohg-tumblelog.git#egg=blohg-tumblelog
