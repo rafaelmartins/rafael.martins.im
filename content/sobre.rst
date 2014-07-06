@@ -23,13 +23,10 @@ Este blog não possui espaço para comentários propositalmente, mas existem
 `algumas outras formas <http://rafaelmartins.eng.br/about/#contact>`_ de entrar
 em contato comigo.
 
-Este blog também não armazena nenhuma informação sobre os visitantes, não salva
-nenhum *cookie* no browser, não gera nenhum tipo de estatística sobre o público
-e utiliza o mínimo possível de JavaScript (não obstrusivo).
-
-Os arquivos de configuração de servidor utilizados para servir este blog podem
-ser encontrados
-`aqui <https://gist.github.com/rafaelmartins/299ba41142a63a050a5d>`_.
+Este blog também não armazena nenhuma informação sobre os visitantes (além dos
+logs de acesso do servidor), não salva nenhum *cookie* no browser, não gera
+nenhum tipo de estatística sobre o público e utiliza o mínimo possível de
+JavaScript (não obstrusivo).
 
 Estas políticas não se aplicam a conteúdo embarcado de *websites* de terceiros,
 como o YouTube, por exemplo.
