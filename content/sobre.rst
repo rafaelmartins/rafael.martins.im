@@ -4,7 +4,7 @@ Sobre
 Olá,
 
 eu me chamo Rafael Martins, e este é o meu blog sobre assuntos aleatórios. Para
-assuntos técnicos visite meu `outro blog <http://rafaelmartins.eng.br>`_.
+assuntos técnicos visite meu `website <http://rafaelmartins.eng.br>`_.
 
 
 Sobre o domínio do blog
