@@ -23,11 +23,8 @@ $(function() {
 
     // Fake comment box :P
     $(".comments").click(function (e) {
-        alert(
-            "Não existe espaço para comentários neste blog!\n\n" +
-            "Se você tiver algo a dizer sobre este post, me envie um email:\n" +
-            "rafael@rafaelmartins.eng.br");
-        return false;
+        alert("Oh, really?!");
+        return true;
     });
 });
 

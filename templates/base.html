@@ -25,7 +25,7 @@
             <ul>
                 {%- for href, id, title in [
                     (url_for('views.home'), ['', 'page', 'post', 'tag'], 'Posts'),
-                    (url_for('views.content', slug='sobre'), ['sobre'], 'Sobre'),
+                    (url_for('views.content', slug='about'), ['about'], 'About'),
                 ] %}
                 <li><a{% if active_page in id %} class="active"{%
                     endif %} href="{{ href }}">{{ title }}</a></li>
@@ -42,7 +42,7 @@
         </div>
         <div class="clear"></div>
         <div id="footer">
-            <p>Publicado com: <a href="http://blohg.org/">blohg {{ version }}</a></p>  
+            <p>Proudly published with: <a href="http://blohg.org/">blohg {{ version }}</a></p>  
         </div>
         <script type="text/javascript" src="{{
             url_for('static', filename='js/jquery-1.11.0.min.js') }}"></script>

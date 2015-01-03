@@ -2,7 +2,7 @@
 
 {%- macro format_tags(tags, with_links=True) %}
     {%- for t in tags %}
-        {%- if loop.last and tags|length > 1 %} e {% else %}{%
+        {%- if loop.last and tags|length > 1 %} and {% else %}{%
             if not loop.first -%}, {% endif %}{% endif -%}
         {% if with_links -%}
         <a href="{{ url_for('views.tag', tag=t) }}">{{ t }}</a>
@@ -13,10 +13,10 @@
 {%- macro format_title(post) %}
     {%- if 'videos' in post.tags -%}
         Video:
-    {%- elif 'imagens' in post.tags -%}
-        Imagem:
-    {%- elif 'fotos' in post.tags -%}
-        Foto:
+    {%- elif 'images' in post.tags -%}
+        Image:
+    {%- elif 'pictures' in post.tags -%}
+        Picture:
     {%- endif %} {{ post.title }}
 {%- endmacro %}
 
@@ -33,7 +33,7 @@
         {%- elif active_page == 'post' -%}
             {{ format_title(posts|first) }}
         {%- elif pagination -%}
-            Página {{ pagination.current }}
+            Page {{ pagination.current }}
         {%- else -%}
             {{ title }}
         {%- endif %}
@@ -49,9 +49,9 @@
 {%- if tag -%}
 <blockquote>
     <p>
-        Você está vendo os arquivos da{% if tag|length > 1%}s{% endif %} tag{%
-            if tag|length > 1%}s{% endif %} {{ format_tags(tag) }}. (<small><a href="{{
-            url_for('views.atom', tag=tag|join('/')) }}">Feed Atom</a></small>)
+        You're browsing the archives of the tag{% if tag|length > 1 %}s{%
+            endif %} {{ format_tags(tag) }}. (<small><a href="{{
+            url_for('views.atom', tag=tag|join('/')) }}">Atom feed</a></small>)
     </p>
 </blockquote>
 {%- endif %}
@@ -75,38 +75,39 @@
 
 {%- if post.read_more and not full_content -%}
 <p>
-    <a href="{{ url_for('views.content', slug=post.slug) }}">Leia mais...</a>
+    <a href="{{ url_for('views.content', slug=post.slug) }}">Read more...</a>
 </p>
 {%- endif -%}
 
 {%- if is_post(post.slug) -%}
 <p class="signature">
-    {%- if 'videos' in post.tags -%}
-        Video publicado por
+    {%- if 'rants' in post.tags -%}
+        Rant written by
+    {%- elif 'videos' in post.tags -%}
+        Video published by
     {%- elif 'images' in post.tags -%}
-        Imagem publicada por
+        Image published by
     {%- elif 'photos' in post.tags -%}
-        Foto publicada por
+        Picture published by
     {%- else -%}
-        Post escrito por
+        Post written by
     {%- endif %}
-    {{ post.author_name }} em {{ post.datetime|datetimeformat }}{% if
-        post.tags %}, arquivado sob a{% 
-        if post.tags|length > 1 %}s{% endif %} tag{%
+    {{ post.author_name }} in {{ post.datetime|datetimeformat }}{% if
+        post.tags %}, filed under the tag{% 
         if post.tags|length > 1 %}s{% endif %} {{ format_tags(post.tags)
         }}{% endif %}.
-    <a href="{{ url_for('views.content', slug='sobre')
-        }}#politicas-de-privacidade-e-comentarios" class="comments">Comentários</a>.
-    <a href="{{ url_for('views.content', slug=post.slug) }}">Link permanente</a>.
+    <a href="{{ url_for('views.content', slug='about')
+        }}#privacy-policy-and-comments" class="comments">Comments</a>.
+    <a href="{{ url_for('views.content', slug=post.slug) }}">Permanent link</a>.
 </p>
 {%- endif -%}
 
 {%- else %}
 <blockquote>
     <p>
-        Não há nada disponível aqui ainda, mas você já pode assinar o meu
-        <a href="{{ url_for('views.atom') }}">feed Atom</a> para ter acesso aos
-        posts assim que eu começar a publicar! :)
+        There's nothing available here yet, but you may want to subscribe
+        to my <a href="{{ url_for('views.atom') }}">Atom feed</a> to get the
+        content as soon as I start publishing it! :)
     </p>
 </blockquote>
 {%- endfor %}
@@ -117,14 +118,14 @@
 <div id="pager">
     <ul>
         {%- if pagination.current > 1 %}
-        <li class="previous"><a href="{{ pagination.url_gen(pagination.current-1) }}">&larr; Mais novos</a></li>
+        <li class="previous"><a href="{{ pagination.url_gen(pagination.current-1) }}">&larr; Newer</a></li>
         {%- else %}
-        <li class="previous">&larr; Mais novos</li>
+        <li class="previous">&larr; Newer</li>
         {%- endif %}
         {%- if pagination.current < pagination.num_pages %}
-        <li class="next"><a href="{{ pagination.url_gen(pagination.current+1) }}">Mais antigos &rarr;</a></li>
+        <li class="next"><a href="{{ pagination.url_gen(pagination.current+1) }}">Older &rarr;</a></li>
         {%- else %}
-        <li class="next">Mais antigos &rarr;</li>
+        <li class="next">Older &rarr;</li>
         {%- endif %}
     </ul>
 </div>
