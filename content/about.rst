@@ -63,4 +63,12 @@ This is a personal weblog. The opinions expressed here represent my own and
 not those of my employer or any other organization that I'm affiliated.
 
 
+Weblog source code
+------------------
+
+This weblog isn't technical, but if you are nerd enough you may want to see
+its source code. It is
+`publicly available <https://github.com/rafaelmartins/rafael.martins.im>`_.
+
+
 ~rafaelmartins
